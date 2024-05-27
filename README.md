@@ -25,9 +25,20 @@ options:
 ```
 
 ### Demo
-```python ecg_monitor.py 'ecg.csv' -tstart 100```
-![](./demo-gif/lowcut-filtration.gif)
 
-Too low filter lowcut value - low frequencies components (breathing chest movements) causes signal floating.
-```python ecg_monitor.py 'ecg.csv' -tstart 100 --lowcut 0.1```
-![](./demo-gif/no-lowcut-filtration.gif)
+
+<div align="center">
+  <code>python ecg_monitor.py 'ecg.csv' -tstart 100</code>
+  <br/>
+  <img src="./demo-gif/lowcut-filtration.gif">
+  
+  <br/><br/>
+  
+  <code>python ecg_monitor.py 'ecg.csv' -tstart 100 --lowcut 0.1</code>
+  <img src="./demo-gif/no-lowcut-filtration.gif">
+  <br/>
+  <p>Too low filter lowcut value - low frequencies components (breathing chest movements) causes signal floating.</p>
+</div>
+
+
+
