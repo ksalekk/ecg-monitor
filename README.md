@@ -28,7 +28,7 @@ options:
 
 
 <div align="center">
-  <code>python ecg_monitor.py 'ecg.csv' -tstart 100</code>
+  <code>python ecg_monitor.py 'ecg.csv' -tstart 140</code>
   <br/>
   <img src="./demo-gif/lowcut-filtration.gif">
   
