@@ -1,14 +1,12 @@
 # ECG Monitor
 
 ### Disclaimer
-This app provides only information for educational purposes. This App is not medical or treatment advice, professional diagnosis, opinion, or services – and may not be treated as such by the user. As such, this App may not be relied upon for the purposes of medical diagnosis or as a recommendation for medical care or treatment. The information provided by this App is not a substitute for professional medical advice, diagnosis or treatment.
+This app provides only information for educational purposes. This app is not medical or treatment advice, professional diagnosis, opinion, or services – and may not be treated as such by the user. As such, this app may not be relied upon for the purposes of medical diagnosis or as a recommendation for medical care or treatment. The information provided by this app is not a substitute for professional medical advice, diagnosis or treatment.
 
 ### General
-Simple script for displaying electrocardiography data collected before into csv formatted file. 
+A simple script to display ECG waveform graphs based on data previously collected from the ECG recorder. The script accepts a CSV file whose first column contains time samples and the second column contains ECG signal samples. The signal is filtered using a Butterworth bandpass filter.
 
 ### Usage
-Datasource should be csv file with 2 columns - first column with time, second one with ecg sampled values
-
 ```
 positional arguments:
   fname                 File path
@@ -25,20 +23,17 @@ options:
 ```
 
 ### Demo
+```
+python ecg_monitor.py 'ecg.csv' -tstart 140
+```
+<img src="./demo-gif/lowcut-filtration.gif">
+<br/>
 
-
-<div align="center">
-  <code>python ecg_monitor.py 'ecg.csv' -tstart 140</code>
-  <br/>
-  <img src="./demo-gif/lowcut-filtration.gif">
-  
-  <br/><br/>
-  
-  <code>python ecg_monitor.py 'ecg.csv' -tstart 100 --lowcut 0.1</code>
-  <img src="./demo-gif/no-lowcut-filtration.gif">
-  <br/>
-  <p>Too low filter lowcut value - low frequencies components (breathing chest movements) causes signal floating.</p>
-</div>
+```
+python ecg_monitor.py 'ecg.csv' -tstart 100 --lowcut 0.1
+```
+<img src="./demo-gif/no-lowcut-filtration.gif">
+<p>Too low filter lowcut value - low frequencies components (breathing chest movements) causes signal floating.</p>
 
 
 
