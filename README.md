@@ -22,6 +22,9 @@ options:
   -dt DT                  Displaying window width as time in seconds; default 5s
 ```
 
+### Requirements
+The script uses external libraries: matplotlib, scipy and numpy.
+
 ### Demo
 ```
 python ecg_monitor.py 'ecg.csv' -tstart 140
